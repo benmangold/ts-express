@@ -6,7 +6,7 @@ a template nodejs repo meant to get things moving
 
 a `helloworld` express server with all the bells and whistles
 
-typescript, eslint, prettier, husky
+typescript, eslint, prettier, husky 
 
 prepared to run in production with pm2 or docker
 
@@ -16,9 +16,23 @@ prepared to run in production with pm2 or docker
 
 `npm run build` - compile typescript to `dist/`
 
-`npm run start` - start `dist/index.js`
+`npm run start` - start `dist/index.js` with nodejs - used in docker container
 
-`npm run pm2` start `dist/index.js` in pm2 - *required pm2 cli installation*
+`npm run pm2` - start `dist/index.js` with pm2 - *required pm2 cli installation*
+
+### docker
+
+*required docker cli installation*
+
+```bash
+# pull and run image
+docker pull bmngld/ts-express
+docker run -d -p 4000:4000 bmngld/ts-express
+# build and run image
+docker build -t ts-express .
+docker run -d -p 4000:4000 ts-express
+
+```
 
 ### pm2 cli installation
 
@@ -27,21 +41,5 @@ prepared to run in production with pm2 or docker
 npm i -g pm2
 # if that fails on permissions:
 sudo npm i -g pm2
-```
 
-### pull and run docker image
-
-```bash
-docker pull bmngld/ts-express
-docker run -p 4000:4000 bmngld/ts-express
-```
-
-
-### build and run docker image
-
-*requires available `docker` installation*
-
-```bash
-docker build -t ts-express .
-docker run -p 4000:4000 ts-express
 ```
