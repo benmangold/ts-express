@@ -16,7 +16,7 @@ RUN chmod 755 /usr/local/bin/node_modules
 
 USER root
 
-RUN npm i -g pm2 typescript
+RUN npm i -g typescript
 
 USER node
 
@@ -26,6 +26,8 @@ COPY * /home/node/app/
 
 RUN npm install
 
-RUN npm run start
+RUN npm run build
 
-ENTRYPOINT pm2 logs 0
+EXPOSE 4000
+
+CMD ["npm", "run", "start"]
