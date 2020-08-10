@@ -1,7 +1,7 @@
 {
   "name": "ts-express",
   "version": "1.0.0",
-  "description": "",
+  "description": "a ts project starter",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc --p tsconfig.json",
@@ -17,7 +17,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "pm2": "^4.4.0"

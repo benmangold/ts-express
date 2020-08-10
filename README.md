@@ -6,7 +6,7 @@ a template nodejs repo meant to get things moving
 
 a `helloworld` express server with all the bells and whistles
 
-~typescript, eslint, prettier, husky~
+typescript, eslint, prettier, husky
 
 prepared to run in production with pm2 and docker
 
