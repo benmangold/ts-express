@@ -14,15 +14,15 @@ RUN mkdir /usr/local/bin/node_modules
 RUN chown -R node:node /usr/local/bin/node_modules
 RUN chmod 755 /usr/local/bin/node_modules
 
+WORKDIR /home/node/app
+
+COPY * /home/node/app/
+
 USER root
 
 RUN npm i -g typescript
 
 USER node
-
-WORKDIR /home/node/app
-
-COPY * /home/node/app/
 
 RUN npm install --production
 

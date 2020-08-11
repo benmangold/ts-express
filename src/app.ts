@@ -1,11 +1,10 @@
-import express from 'express';
-
+import express from "express";
 const app = express();
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.end('hello');
+app.get('/', (req: any, res: any) => {
+  res.send('hello');
 });
 
 export default app;
