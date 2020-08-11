@@ -8,7 +8,13 @@ a `helloworld` express server with all the bells and whistles
 
 typescript, eslint, prettier, husky 
 
-prepared to run in production with pm2 or docker
+prepared to run in production with docker or pm2
+
+## releases
+
+docker images built and published via github actions
+
+`bmngld/ts-express:0.0.1` - available on public docker hub
 
 ## npm scripts
 
@@ -18,11 +24,11 @@ prepared to run in production with pm2 or docker
 
 `npm run start` - start `dist/index.js` with nodejs - used in docker container
 
-`npm run pm2` - start `dist/index.js` with pm2 - *required pm2 cli installation*
+`npm run pm2` - start `dist/index.js` with pm2 - *requires pm2 cli installation*
 
 ### docker
 
-*required docker cli installation*
+*requires docker cli installation*
 
 ```bash
 # pull and run image
