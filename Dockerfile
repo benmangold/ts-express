@@ -16,7 +16,7 @@ RUN chmod 755 /usr/local/bin/node_modules
 
 WORKDIR /home/node/app
 
-COPY * /home/node/app/
+COPY . .
 
 USER root
 
